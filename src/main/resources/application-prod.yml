@@ -1,0 +1,8 @@
+spring:
+  jpa:
+    show-sql: false
+
+logging:
+  level:
+    com.msv.invoiceservice: INFO
+    org.hibernate.SQL: OFF
