@@ -35,10 +35,15 @@ public enum ErrorCode {
     // ── Customer Domain ──────────────────────────────────────────
     INV_CUSTOMER_NOT_FOUND         (HttpStatus.NOT_FOUND,              "Customer not found"),
     INV_CUSTOMER_ALREADY_EXISTS    (HttpStatus.CONFLICT,               "Customer already exists"),
-
+    INV_CUSTOMER_EMAIL_ALREADY_EXISTS   (HttpStatus.CONFLICT,  "Customer email already exists"),
+    INV_CUSTOMER_PHONE_ALREADY_EXISTS   (HttpStatus.CONFLICT,  "Customer phone already exists"),
+    INV_CUSTOMER_BLOCKED                (HttpStatus.FORBIDDEN, "Customer account is blocked"),
+    INV_CUSTOMER_INACTIVE               (HttpStatus.FORBIDDEN, "Customer account is inactive"),
+    INV_CUSTOMER_INVALID_STATUS         (HttpStatus.UNPROCESSABLE_ENTITY, "Invalid customer status transition"),
     // ── Merchant Domain ──────────────────────────────────────────
     INV_MERCHANT_NOT_FOUND         (HttpStatus.NOT_FOUND,              "Merchant not found"),
     INV_MERCHANT_ALREADY_EXISTS    (HttpStatus.CONFLICT,               "Merchant already exists");
+
 
     private final HttpStatus httpStatus;
     private final String defaultMessage;
