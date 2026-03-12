@@ -32,10 +32,6 @@ public class Customer extends BaseEntity {
     @Column(name = "phone_number", nullable = false, unique = true, length = 30)
     private String phoneNumber;
 
-//    @Enumerated(EnumType.STRING)
-//    @Column(nullable = false, length = 20)
-//    private CustomerStatus status;
-
     @Column(length = 500)
     private String note;
 }

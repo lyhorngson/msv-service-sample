@@ -1,7 +1,5 @@
 package com.msv.service_sample.dto.response;
 
-
-
 import java.time.Instant;
 
 public record CustomerResponse(
