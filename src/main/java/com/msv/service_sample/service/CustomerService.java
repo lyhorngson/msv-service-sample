@@ -7,9 +7,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface CustomerService {
     CustomerResponse create(CustomerRequest request);
-
-
-
     CustomerResponse getById(Long id);
     Page<CustomerResponse> list(Pageable pageable);
     CustomerResponse update(Long id, CustomerRequest request);
